@@ -1,5 +1,4 @@
 .container {
-  max-width: 1280px;
-  margin: auto;
-  background-color: red;
+  @apply max-w-[1280px] m-[auto] flex justify-between;
+
 }
