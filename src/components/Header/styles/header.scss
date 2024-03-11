@@ -1,15 +1,32 @@
 .header {
     @apply p-[30px];
 
-    &__nav {
-        @apply flex justify-between items-center;
+    .mobile-nav .mobile-nav__bar,
+    .desktop-nav {
+        @apply justify-between items-center;
+    }
 
+    .mobile-nav .mobile-nav__bar {
+        @apply flex lg:hidden;
+        
         .logo {
-            @apply w-[60px] h-[60px] md:w-[81px] md:h-[81px];
+            @apply w-[60px] h-[60px];
         }
-
+    
         .menu-btn {
             @apply w-[35px] h-[35px] bg-[#fff];
+        }
+    }
+
+    .desktop-nav {
+        @apply w-full hidden lg:flex;
+        
+        .logo {
+            @apply w-[81px] h-[81px];
+        }
+
+        .nav-menu {
+            @apply w-fit;
         }
     }
 }
