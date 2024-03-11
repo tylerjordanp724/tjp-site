@@ -28,5 +28,9 @@
         .nav-menu {
             @apply w-fit;
         }
+
+        .nav-menu ul li a {
+            @apply text-white;
+        }
     }
 }

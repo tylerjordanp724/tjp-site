@@ -29,9 +29,9 @@ const Header = () => {
                     <div className="nav-menu">
                         {/* TODO: add page anchors */}
                         <ul>
-                            <li><a href={''}>Recent work</a></li>
-                            <li><a href={''}>Experience</a></li>
-                            <li><a href={''}>About me</a></li>
+                            <li><a href={'#recent-work'}>Recent work</a></li>
+                            <li><a href={'#experience'}>Experience</a></li>
+                            <li><a href={'#about-me'}>About me</a></li>
                         </ul>
                     </div>
                 </div>
