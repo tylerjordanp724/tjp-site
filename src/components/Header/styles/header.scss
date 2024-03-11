@@ -1,3 +1,15 @@
 .header {
-    color: white;
+    @apply p-[30px];
+
+    &__nav {
+        @apply flex justify-between items-center;
+
+        .logo {
+            @apply w-[60px] h-[60px] md:w-[81px] md:h-[81px];
+        }
+
+        .menu-btn {
+            @apply w-[35px] h-[35px] bg-[#fff];
+        }
+    }
 }
