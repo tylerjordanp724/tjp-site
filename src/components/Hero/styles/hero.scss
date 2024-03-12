@@ -1,0 +1,11 @@
+.hero {
+    @apply p-[30px] w-full h-auto md:h-[75vh] flex flex-col items-center;
+    
+    p {
+        @apply text-white text-4xl md:text-6xl leading-[1.4] md:leading-[1.45];
+    }
+
+    p span {
+        @apply text-gray-600;
+    }
+}

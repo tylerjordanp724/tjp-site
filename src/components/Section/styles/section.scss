@@ -1,0 +1,32 @@
+.section {
+    @apply p-[30px];
+
+    &__heading {
+        @apply py-[60px];  
+    }
+
+    &__heading,
+    .card-intro {
+        span.title {
+            @apply uppercase text-white text-sm tracking-widest block mb-2;
+        }
+
+        h2.headline {
+            @apply text-white text-4xl;
+        }
+    }
+}
+
+.section-card {
+    &__wrapper {
+        @apply grid grid-cols-1 md:grid-cols-2 items-start py-[60px];
+    }
+
+    .card-intro h2.headline {
+        @apply w-3/4 mb-6;
+    }
+
+    .card-body {
+        @apply text-white;
+    }
+}

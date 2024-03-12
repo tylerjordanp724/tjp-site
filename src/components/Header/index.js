@@ -4,10 +4,18 @@ import './styles/header.scss';
 
 const Header = () => {
     const logo = `${process.env.PUBLIC_URL}/logo.svg`;
+    //const body = document.getElementsByTagName('body');
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
+        //document.body.classList.remove("overflow-y-hidden");
+        if(menuOpen === false) {
+            document.body.classList.add("overflow-y-hidden");
+        } else if(menuOpen === true) {
+            document.body.classList.remove("overflow-y-hidden");
+        }
+        
     }
 
     useEffect(() => {
