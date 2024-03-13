@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
 import SectionCard from "../components/SectionCard";
+import { work } from "../data";
 
 const HomePage = () => {
     // sections: hero, work, experience, about
@@ -12,7 +13,23 @@ const HomePage = () => {
                 id={"recent-work"} 
                 title={"Recent work"} 
                 headline={"Things I've done"}>
-                
+                <div className="list">
+                    {work.map((workItem, i) => {
+                        return (
+                            <div className="item" key={`list-item-${i}`}>
+                                <div className="item__col">
+                                    <span className="item__label">{`${workItem.year} \xa0| \xa0 ${workItem.categories.join(" \xa0\ / \xa0\ ")}`}</span>
+                                    <h3 className="item__title">{workItem.title}</h3>
+                                </div>
+                                <div className="item__col">
+                                    <p className="item__desc">
+                                        {workItem.desc}
+                                    </p>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
             </Section>
             <Section 
                 id={"experience"} 

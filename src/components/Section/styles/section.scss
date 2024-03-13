@@ -1,5 +1,5 @@
 .section {
-    @apply p-[30px];
+    @apply p-[30px] lg:p-[60px];
 
     &__heading {
         @apply py-[60px];  

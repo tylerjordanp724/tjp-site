@@ -1,5 +1,6 @@
 .header {
-    @apply p-[30px] bg-[#1a1a1a];
+    @apply px-[30px] py-[15px] lg:px-[60px] md:py-[30px] bg-[#1a1a1a];
+    @apply lg:absolute h-fit fixed w-full z-[1];
 
     .mobile-nav .mobile-nav__bar,
     .desktop-nav {
@@ -32,7 +33,7 @@
     }
 
     .mobile-nav__menu {
-        @apply block lg:hidden fixed top-[0] left-0 w-full h-full bg-[#1a1a1a] z-0;
+        @apply block lg:hidden fixed top-0 left-0 w-full h-full bg-[#1a1a1a] z-[2];
         @apply p-8 translate-y-[-100%] transition-all duration-700 ease-in-out;
 
         ul {
@@ -68,8 +69,12 @@
             @apply w-fit;
         }
 
+        .nav-menu ul li {
+            @apply mb-2;
+        }
+
         .nav-menu ul li a {
-            @apply text-white;
+            @apply text-white text-base;
         }
     }
 }
