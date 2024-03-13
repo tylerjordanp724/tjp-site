@@ -3,5 +3,23 @@
 }
 
 .page-content {
-  @apply relative top-[90px] z-0;
+  @apply relative top-[90px] z-0 lg:top-0;
+}
+
+.list {
+  .item {
+    @apply block mb-12 lg:mb-20 lg:flex lg:justify-between;
+    
+    &__label {
+      @apply text-sm text-gray-600 block mb-2;
+    }
+
+    &__title {
+      @apply text-white text-[1.75em] mb-2;
+    }
+
+    &__desc {
+      @apply text-white;
+    }
+  }
 }

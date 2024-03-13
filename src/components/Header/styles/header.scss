@@ -1,6 +1,6 @@
 .header {
     @apply px-[30px] py-[15px] lg:px-[60px] md:py-[30px] bg-[#1a1a1a];
-    @apply lg:absolute h-fit fixed w-full z-[1];
+    @apply lg:relative h-fit fixed w-full z-[1];
 
     .mobile-nav .mobile-nav__bar,
     .desktop-nav {

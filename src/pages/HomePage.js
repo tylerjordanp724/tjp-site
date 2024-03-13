@@ -15,16 +15,20 @@ const HomePage = () => {
                 headline={"Things I've done"}>
                 <div className="list">
                     {work.map((workItem, i) => {
+                        const categories = workItem.categories.join(" \xa0\ / \xa0\ ");
                         return (
                             <div className="item" key={`list-item-${i}`}>
                                 <div className="item__col">
-                                    <span className="item__label">{`${workItem.year} \xa0| \xa0 ${workItem.categories.join(" \xa0\ / \xa0\ ")}`}</span>
+                                    <span className="item__label">{`${workItem.year} \xa0| \xa0 ${categories}`}</span>
                                     <h3 className="item__title">{workItem.title}</h3>
                                 </div>
                                 <div className="item__col">
                                     <p className="item__desc">
                                         {workItem.desc}
                                     </p>
+                                </div>
+                                <div className="item__col">
+                                    <a className="btn" href={workItem.url}>Visit site</a>
                                 </div>
                             </div>
                         );
