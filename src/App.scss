@@ -8,10 +8,23 @@
 
 .list {
   .item {
-    @apply block mb-12 lg:mb-20 lg:flex lg:justify-between;
+    @apply block mb-12 lg:mb-20 md:flex md:justify-between;
+
+    &__col {
+      @apply w-auto md:w-full mb-4 md:px-4; 
+
+      &:first-child {
+        @apply pl-0;
+      }
+
+      .btn {
+        @apply block ml-[-10px] md:ml-auto lg:text-center;
+      }
+    }
+    
     
     &__label {
-      @apply text-sm text-gray-600 block mb-2;
+      @apply text-sm text-gray-500 block mb-0 capitalize;
     }
 
     &__title {

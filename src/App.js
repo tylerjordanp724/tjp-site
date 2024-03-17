@@ -2,6 +2,7 @@
 import './App.scss';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div className="page-content">
         <HomePage />
       </div>
+      <Footer />
     </div>
   );
 }

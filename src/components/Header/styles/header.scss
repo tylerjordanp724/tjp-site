@@ -74,7 +74,18 @@
         }
 
         .nav-menu ul li a {
-            @apply text-white text-base;
+            @apply text-white text-base flex relative items-center justify-between transition-[margin-left] duration-300 ml-0;
+            
+            &:after {
+                @apply content-[''] block h-[1px] w-0 ml-2 bg-white transition-[width] duration-300 ease-in-out absolute right-[-30px]; 
+            }
+
+            &:hover {
+                @apply ml-[-20px];
+                &:after {
+                    @apply w-[30px]
+                }
+            }
         }
     }
 }

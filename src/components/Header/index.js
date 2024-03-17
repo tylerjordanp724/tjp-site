@@ -4,8 +4,13 @@ import './styles/header.scss';
 
 const Header = () => {
     const logo = `${process.env.PUBLIC_URL}/logo.svg`;
-    //const body = document.getElementsByTagName('body');
     const [menuOpen, setMenuOpen] = useState(false);
+
+    const navItems = [
+        {id:'recent-work',  title: 'Recent work'},
+        {id:'experience', title: 'Experience'},
+        {id:'about-me', title: 'About me'}
+    ];
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -17,13 +22,15 @@ const Header = () => {
         }
         
     }
+    
+    const closeMenu = () => {
+        if (menuOpen) {
+            setMenuOpen(false);
+            document.body.classList.remove("overflow-y-hidden");
+        }
+    }
 
     useEffect(() => {
-        const closeMenu = () => {
-            if (menuOpen) {
-                setMenuOpen(false);
-            }
-        }
         window.addEventListener('resize', closeMenu);
     }, [menuOpen]);
 
@@ -43,9 +50,28 @@ const Header = () => {
                 </div>
                 <div className={`mobile-nav__menu ${menuOpen ? 'is-open' : ''}`}>
                     <ul>
-                        <li><a href={'#recent-work'}>Recent work</a></li>
-                        <li><a href={'#experience'}>Experience</a></li>
-                        <li><a href={'#about-me'}>About me</a></li>
+                        {navItems?.map((item, i) => {
+                            return (
+                                <li 
+                                    key={`item-${i}`}>
+                                        <a 
+                                            href="#" 
+                                            data-loc={`#${item.id}`}
+                                            onClick={(e) => {
+                                                const currTarget = document.querySelector(`${e.target.getAttribute('data-loc')}`);
+
+                                                e.preventDefault();
+
+                                                closeMenu();
+
+                                                window.scrollTo(0, currTarget.offsetTop + 60);
+                                                
+                                            }}>
+                                            {item.title}
+                                        </a>
+                                </li>
+                            );
+                        })}
                     </ul>
                 </div>
             </div>
@@ -57,9 +83,15 @@ const Header = () => {
                     <div className="nav-menu">
                         {/* TODO: add page scrolling */}
                         <ul>
-                            <li><a href={'#recent-work'}>Recent work</a></li>
-                            <li><a href={'#experience'}>Experience</a></li>
-                            <li><a href={'#about-me'}>About me</a></li>
+                            {navItems?.map((item, i) => {
+                                return <li key={`item-${i}`}><a href="#" data-loc={`#${item.id}`} onClick={(e) => {
+                                    const currTarget = document.querySelector(`${e.target.getAttribute('data-loc')}`);
+
+                                    e.preventDefault();
+
+                                    window.scrollTo(0, currTarget.offsetTop + 120);
+                                }}>{item.title}</a></li>
+                            })}
                         </ul>
                     </div>
                 </div>

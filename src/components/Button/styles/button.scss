@@ -1,0 +1,26 @@
+.btn {
+    @apply relative w-fit overflow-hidden z-0 py-10 px-6 rounded-[100%] scale-[0.9] lg:scale-100;
+    
+    &:after {
+        content: '';
+        @apply block absolute bg-white w-full h-full rounded-[100%] top-0 left-0 z-0 ease-in-out duration-300 scale-100 lg:scale-0;
+    }
+    
+    span {
+        @apply text-center block relative z-[1] text-[#1a1a1a] lg:text-white ease-in-out duration-300;
+    }
+
+    a {
+        @apply block absolute w-full h-full top-0 left-0 z-[1];
+    }
+
+    &:hover {
+        &:after {
+            @apply lg:scale-100;
+        } 
+
+        span {
+            @apply text-[#1a1a1a];
+        }
+    }
+}
