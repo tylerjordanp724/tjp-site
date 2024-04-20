@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { navItems } from "../../data";
 import './styles/header.scss';
 
@@ -15,13 +16,13 @@ const Header = () => {
                     <div className="nav-menu">
                         <ul>
                             {navItems?.map((item, i) => {
-                                return <li key={`item-${i}`}><a href="#" data-loc={`#${item.id}`} onClick={(e) => {
+                                return <li key={`item-${i}`}><NavLink to="#" data-loc={`#${item.id}`} onClick={(e) => {
                                     const currTarget = document.querySelector(`${e.target.getAttribute('data-loc')}`);
 
                                     e.preventDefault();
 
                                     window.scrollTo(0, currTarget.offsetTop + 120);
-                                }}>{item.title}</a></li>
+                                }}>{item.title}</NavLink></li>
                             })}
                         </ul>
                     </div>

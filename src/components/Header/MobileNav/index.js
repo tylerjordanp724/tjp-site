@@ -45,7 +45,7 @@ const MobileNav = ({logo}) => {
                             <li 
                                 key={`item-${i}`}>
                                     <a 
-                                        href="#" 
+                                        href="javascript:void(0)" 
                                         data-loc={`#${item.id}`}
                                         onClick={(e) => {
                                             const currTarget = document.querySelector(`${e.target.getAttribute('data-loc')}`);
