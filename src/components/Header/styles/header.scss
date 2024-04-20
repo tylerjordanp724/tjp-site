@@ -1,6 +1,6 @@
 .header {
     @apply px-[30px] py-[15px] lg:px-[60px] md:py-[30px] bg-[#1a1a1a];
-    @apply lg:relative h-fit fixed w-full z-[1];
+    @apply relative h-fit w-full top-0 left-0 z-[1];
 
     .mobile-nav .mobile-nav__bar,
     .desktop-nav {
@@ -59,10 +59,10 @@
     }
 
     .desktop-nav {
-        @apply w-full hidden lg:flex;
+        @apply w-full flex;
         
         .logo {
-            @apply w-[81px] h-[81px];
+            @apply w-[60px] h-[60px] md:w-[81px] md:h-[81px];
         }
 
         .nav-menu {

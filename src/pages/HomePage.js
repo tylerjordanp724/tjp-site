@@ -7,7 +7,7 @@ import { work, places, links } from "../data";
 
 const HomePage = () => {
     return (
-        <>
+        <div className="page-content">
             <Hero />
             <Section 
             id={"recent-work"} 
@@ -57,7 +57,7 @@ const HomePage = () => {
             id={"about-me"} 
             title={"About me"} 
             headline={"Thanks for checking out my work"}
-            text={"I’ve been in the industry for 10 + years and have been lucky to work with some really cool people on some pretty awesome teams. Making aweosme digital experiences is something that I really love and I hope that comes across in my work. I also love learning new tools, techniques and ways of working. I’m always open for new work opportunities and collaboration, so feel free to reach out (or if you just wanna say hi)."}
+            text={"I’ve been in the industry for 10 + years and have been priveleged to be part of some teams that do really good work and I've learned a lot in the process. Creating fun and interesting  digital experiences is something that I really enjoy and I hope that comes across in my work. I'm  also eager to learn new tools, techniques and ways of working. I’m always open for new work opportunities and collaboration, so feel free to reach out (even if you just wanna say hi)."}
             >
                 <ul className="link-list">  
                     {links.map((link, i) => {
@@ -68,7 +68,7 @@ const HomePage = () => {
                     }
                 </ul>
             </SectionCard>
-        </>
+        </div>
     );
 }
 

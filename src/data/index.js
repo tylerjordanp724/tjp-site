@@ -1,8 +1,14 @@
+export const navItems = [
+    {id:'recent-work',  title: 'Recent work'},
+    {id:'experience', title: 'Experience'},
+    {id:'about-me', title: 'About me'}
+];
+
 export const work = [
     {  
         id: 'dj-habibeats',
         title: 'DJ Habibeats',
-        desc: 'Custom theme created for a single-page website aimed at promoting DJ Habibeats’ music, tour dates and merch sales.',
+        desc: 'Designed and built a custom WordPress theme used for managing a single-page website aimed at promoting DJ Habibeats’ music, tour dates and merch sales.',
         year: '2023',
         categories: ['marketing', 'wordpress', 'freelance'],
         url: 'https://djhabibeats.com'
@@ -10,7 +16,7 @@ export const work = [
     {  
         id: 'sabrina-claudio',
         title: 'Sabrina Claudio',
-        desc: 'Custom theme created for a single-page website aimed at promoting Grammy-nominated singer/songwriter, Sabrina Claudio’s music, tour dates and merch sales.',
+        desc: 'Designed and built a custom WordPress theme used for managing a single-page website aimed at promoting Grammy-nominated singer/songwriter, Sabrina Claudio’s music, tour dates and merch sales.',
         year: '2023',
         categories: ['marketing', 'wordpress', 'freelance'],
         url: 'https://sabrinaclaudio.co'
@@ -18,7 +24,7 @@ export const work = [
     {  
         id: 'heavy',
         title: 'Heavy',
-        desc: 'Custom theme built for a Philly-based, multidisciplinary creative agency that uses flexible components and to build bespoke page layouts.',
+        desc: 'Built a custom theme for a multidisciplinary creative agency based in Philadelphia. The theme consists of flexible components used to build bespoke page layouts.',
         year: '2021',
         categories: ['marketing', 'wordpress', 'freelance'],
         url: 'https://heavydoesit.com'
@@ -26,7 +32,7 @@ export const work = [
     {
         id: 'whyy',
         title: 'WHYY',
-        desc: 'Worked closely with team leads and stakeholders to consolidate, organize  & migrate existing content, deliver a new custom theme and implement new features including a persistent audio player for radio content.',
+        desc: 'Worked closely with team leads and stakeholders to consolidate, organize  & migrate existing content, build & deliver a new custom theme and implement new features including a persistent audio player for radio content.',
         year: '2017',
         categories: ['marketing', 'wordpress', 'bluecadet'],
         url: 'https://whyy.org/'
