@@ -2,7 +2,6 @@ import { useScroll,
     useTransform,
     useSpring,
     motion,
-    SpringOptions, 
 } from "framer-motion";
 import { useEffect, useState, useCallback, useRef} from "react";
 import ResizeObserver from "resize-observer-polyfill";
@@ -23,7 +22,7 @@ const MomentumScroll = ({children}) => {
         );
         scrollRef.current && resizeObserver.observe(scrollRef.current);
         return () => resizeObserver.disconnect();
-    }, []);
+    }, [resizeScrollableHeight]);
 
     const { scrollY } = useScroll();
     

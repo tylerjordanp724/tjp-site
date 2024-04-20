@@ -24,7 +24,7 @@ const MobileNav = ({logo}) => {
 
     useEffect(() => {
         window.addEventListener('resize', closeMenu);
-    }, [menuOpen]);
+    }, [menuOpen, closeMenu]);
     return (
         <div className="mobile-nav container">
             <div className="mobile-nav__bar">

@@ -1,6 +1,5 @@
 import React from "react";
 import { navItems } from "../../data";
-import MobileNav from "./MobileNav";
 import './styles/header.scss';
 
 

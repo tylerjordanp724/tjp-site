@@ -28,7 +28,7 @@ const HomePage = () => {
                                     </p>
                                 </div>
                                 <div className="item__col">
-                                    <Button text={"Visit site"} href={workItem.url} target="_blank"/>
+                                    <Button text={"Visit site"} href={workItem.url} target="_blank" rel="noreferrer"/>
                                 </div>
                             </div>
                         );
@@ -62,7 +62,7 @@ const HomePage = () => {
                 <ul className="link-list">  
                     {links.map((link, i) => {
                             return (
-                                <li key={`link-${i}`}><a href={link.href} target="_blank">{link.title}</a></li>
+                                <li key={`link-${i}`}><a href={link.href} target="_blank" rel="noreferrer">{link.title}</a></li>
                             );
                         })
                     }
