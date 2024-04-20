@@ -1,8 +1,22 @@
 .section {
     @apply p-[30px] lg:px-[60px] lg:py-[30px];
 
+    padding: 30px;
+
+    @media(min-width: 1024px) {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+
+
     &__heading {
         @apply py-[60px];  
+
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     &__heading,
@@ -20,6 +34,9 @@
 .section-card {
     &__wrapper {
         @apply grid grid-cols-1 md:grid-cols-2 items-start py-[60px];
+
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     .card-intro h2.headline {
@@ -47,6 +64,8 @@
                     @apply block absolute h-[1px] w-full lg:w-0 bg-white bottom-[-5px] right-0; 
                     @apply ease-in-out duration-300;
                     content: '';
+                    height: 1px;
+                    bottom: -5px;
                 }
 
                 &:hover:before {

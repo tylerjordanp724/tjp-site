@@ -1,4 +1,10 @@
 .footer {
     @apply p-[30px] lg:px-[60px] lg:py-[30px];
     @apply text-white;
+
+    padding: 30px;
+
+    @media(min-width: 1024px) {
+        padding-left: 60px 30px;
+    }
 }

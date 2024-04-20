@@ -1,8 +1,22 @@
 .hero {
     @apply p-[30px] lg:px-[60px] w-full h-[75vh] flex flex-col items-center;
     
+    padding: 30px;
+    height: 75vh;
+
+    @media(min-width: 1024px) {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
     p {
         @apply text-white text-4xl md:text-6xl leading-[1.4] md:leading-[1.45];
+
+        line-height: 1.4;
+
+        @media(min-width: 768px) {
+            line-height: 1.45;
+        }
     }
 
     p span {
