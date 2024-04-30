@@ -30,7 +30,7 @@
         @apply pl-0;
       }
 
-      &:last-child {
+      &:nth-child(3) {
         @apply w-1/2;
       }
 
