@@ -42,7 +42,7 @@ export const work = [
 export const places = [
     {
         id:'comcast',
-        title: 'Comcast - UX Engineer (Contractor)',
+        title: 'Comcast - UX Engineer',
         tags: ['React JS', 'ES6', 'Typescript', 'VueJS', 'Figma', 'Internal tools'],
         year: '2020 - Present',
     },
