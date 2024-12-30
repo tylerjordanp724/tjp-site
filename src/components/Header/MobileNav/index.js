@@ -8,9 +8,9 @@ const MobileNav = ({logo}) => {
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
 
-        if(menuOpen === false) {
+        if(!menuOpen) {
             document.body.classList.add("overflow-y-hidden");
-        } else if(menuOpen === true) {
+        } else if(menuOpen) {
             document.body.classList.remove("overflow-y-hidden");
         }
     }
@@ -20,6 +20,17 @@ const MobileNav = ({logo}) => {
             setMenuOpen(false);
             document.body.classList.remove("overflow-y-hidden");
         }
+    }
+
+    const scrollToSection = (el) => {
+        el.preventDefault();
+        const currTarget = document.querySelector(`${el.target.getAttribute('data-loc')}`);
+        window.scrollTo(0, currTarget.offsetTop + 120);
+    }
+
+    const navOnMobile = (navItem) => {
+        closeMenu();
+        scrollToSection(navItem);
     }
 
     useEffect(() => {
@@ -47,16 +58,7 @@ const MobileNav = ({logo}) => {
                                     <a 
                                         href="javascript:void(0)" 
                                         data-loc={`#${item.id}`}
-                                        onClick={(e) => {
-                                            const currTarget = document.querySelector(`${e.target.getAttribute('data-loc')}`);
-
-                                            e.preventDefault();
-
-                                            closeMenu();
-
-                                            window.scrollTo(0, currTarget.offsetTop + 60);
-                                            
-                                        }}>
+                                        onClick={e => navOnMobile(e)}>
                                         {item.title}
                                     </a>
                             </li>

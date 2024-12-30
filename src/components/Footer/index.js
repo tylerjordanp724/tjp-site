@@ -1,10 +1,11 @@
 import './styles/footer.scss';
 
 const Footer = () => {
+    const currentYear = () => new Date().getFullYear();
     return (
         <footer className="footer">
             <div className="footer__wrapper container">
-                <span>Copyright &copy; {new Date().getFullYear()}. Tyler Jordan Perry</span>
+                <span>Copyright &copy; {currentYear()}. Tyler Jordan Perry</span>
             </div>
         </footer>
     );
