@@ -1,4 +1,5 @@
 import React from "react";
+import { highlightText } from "../../utils";
 import "./styles/hero.scss";
 
 const Hero = () => {
@@ -6,7 +7,7 @@ const Hero = () => {
         <div className="hero" id="hero">
             <div className="hero__wrapper container">
                 <p>
-                <span>Hi, my name is</span> TJ <span>and I’m a</span> front-end UX engineer & designer <span>based in</span> Philly. <span>I’m</span> available for full-time & freelance opportunities<span>.</span>
+                {highlightText("Hi, my name is")} TJ {highlightText("and I'm a")} front-end UX engineer & designer {highlightText("based in")} Philly. {highlightText("I'm")} available for full-time & freelance opportunities{highlightText(".")}
                 </p>
             </div>
         </div>

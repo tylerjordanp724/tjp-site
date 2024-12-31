@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { navItems } from "../../../data";
+import { scrollToSection } from "../../../utils";
 import '../styles/header.scss';
 
 const MobileNav = ({logo}) => {
@@ -22,11 +23,6 @@ const MobileNav = ({logo}) => {
         }
     }
 
-    const scrollToSection = (el) => {
-        el.preventDefault();
-        const currTarget = document.querySelector(`${el.target.getAttribute('data-loc')}`);
-        window.scrollTo(0, currTarget.offsetTop + 120);
-    }
 
     const navOnMobile = (navItem) => {
         closeMenu();

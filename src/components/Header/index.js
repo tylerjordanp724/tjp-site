@@ -1,17 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { navItems } from "../../data";
+import { scrollToSection } from "../../utils";
 import './styles/header.scss';
 
 
 const Header = () => {
     const logo = `${process.env.PUBLIC_URL}/logo.svg`;
-    
-    const scrollToSection = (el) => {
-        el.preventDefault();
-        const currTarget = document.querySelector(`${el.target.getAttribute('data-loc')}`);
-        window.scrollTo(0, currTarget.offsetTop + 120);
-    }
 
     return (
         <header className="header">

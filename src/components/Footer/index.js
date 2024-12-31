@@ -1,7 +1,7 @@
+import { currentYear } from '../../utils';
 import './styles/footer.scss';
 
 const Footer = () => {
-    const currentYear = () => new Date().getFullYear();
     return (
         <footer className="footer">
             <div className="footer__wrapper container">
