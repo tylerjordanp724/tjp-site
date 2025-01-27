@@ -41,10 +41,16 @@ export const work = [
 
 export const places = [
     {
+        id:'cvs-health',
+        title: 'CVS Health - Design Systems Engineer',
+        tags: ['Typescript', 'Lit', 'Storybook', 'Figma', 'Web Components', 'Health Tech'],
+        year: '2025 - Present',
+    },
+    {
         id:'comcast',
         title: 'Comcast - UX Engineer',
         tags: ['React JS', 'ES6', 'Typescript', 'VueJS', 'Figma', 'Internal tools'],
-        year: '2020 - Present',
+        year: '2020 - 2024',
     },
     {
         id:'fast-capital-360',
