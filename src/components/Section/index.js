@@ -6,7 +6,7 @@ const Section = ({id, title, headline, children}) => {
         <motion.div
             id={id}
             initial={{opacity: 0, y: 30}}
-            transition={{ duration: 0.75, delay: 1, ease: [.6,-0.01,.48,.99]}}
+            transition={{ duration: 0.75, delay: 0.05, ease: [.6,-0.01,.48,.99]}}
             whileInView={{opacity: 1, y: 0}}
             viewport={{ once: true }}
         >

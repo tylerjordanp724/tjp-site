@@ -7,7 +7,7 @@ const Hero = () => {
     return (
         <motion.div
             initial={{opacity: 0, y: 10}}
-            transition={{duration: 1, delay: 1.5, ease: [.6,-0.01,.48,.99]}}
+            transition={{duration: 1, delay: 0.5, ease: [.6,-0.01,.48,.99]}}
             whileInView={{opacity: 1, y: 0}}
             viewport={{ once: true }}
         >

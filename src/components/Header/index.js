@@ -7,7 +7,7 @@ import './styles/header.scss';
 
 
 const Header = () => {
-    const logo = `${process.env.PUBLIC_URL}/logo.svg`;
+    const logo = `${process.env.PUBLIC_URL}/logo-00.png`;
 
     return (
         <motion.div
