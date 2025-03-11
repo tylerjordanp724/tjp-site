@@ -38,7 +38,7 @@ const MomentumScroll = ({children}) => {
         stiffness: 200,
         bounce: 0.5,
         duration: 0.4,
-        velocity: 100,
+        velocity: 200,
     }
 
     const springNegativeScrollY = useSpring(negativeScrollY, springPhysics);
