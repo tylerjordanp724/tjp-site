@@ -16,6 +16,7 @@ const Hero = () => {
                     <p>
                     {highlightText("Hi, my name is")} TJ {highlightText("and I'm a")} front-end UX engineer & designer {highlightText("based in")} Philly. {highlightText("I'm")} available for full-time & freelance opportunities{highlightText(".")}
                     </p>
+                    <></>
                 </div>
             </div>
         </motion.div>

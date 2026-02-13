@@ -3,8 +3,10 @@ import { useScroll,
     useSpring,
     motion,
 } from "framer-motion";
-import { useEffect, useState, useCallback, useRef} from "react";
+import { useEffect, useState, useCallback, useRef, createContext } from "react";
 import ResizeObserver from "resize-observer-polyfill";
+
+export const ScrollContext = createContext(null);
 
 const MomentumScroll = ({children}) => {
     const scrollRef = useRef(null);
@@ -33,18 +35,23 @@ const MomentumScroll = ({children}) => {
     );
 
     const springPhysics = {
-        damping: 22,
-        mass: 0.1,
-        stiffness: 200,
-        bounce: 0.5,
-        duration: 0.4,
-        velocity: 200,
+        damping: 30,     // higher damping -> less oscillation
+        mass: 0.9,       // more mass -> more inertia
+        stiffness: 120,  // lower stiffness -> slower follow
+        restDelta: 0.5,  // settle threshold
     }
 
     const springNegativeScrollY = useSpring(negativeScrollY, springPhysics);
 
+    // Convert back to a positive smoothed scroll value for animations
+    const smoothedScrollY = useTransform(
+        springNegativeScrollY,
+        [0, -scrollableHeight],
+        [0, scrollableHeight]
+    );
+
     return (
-        <>
+        <ScrollContext.Provider value={{ smoothedScrollY, scrollableHeight, scrollRef }}>
             <motion.div
             ref={scrollRef}
             style={{ y: springNegativeScrollY }}
@@ -53,7 +60,7 @@ const MomentumScroll = ({children}) => {
             </motion.div>
 
             <div className="scroll-sizer" style={{ height: scrollableHeight }} />
-        </>
+        </ScrollContext.Provider>
     );
 }
 
